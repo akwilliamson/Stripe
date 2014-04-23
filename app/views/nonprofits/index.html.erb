@@ -1,0 +1,10 @@
+<h2>Nonprofits</h2>
+<div class="add-link">
+  <%= link_to 'Add nonprofit', new_nonprofit_path, id: 'new_nonprofit', remote: true %>
+</div>
+<div class="nonprofits-list">
+  <br>
+  <% Nonprofit.all.each do |nonprofit| %>
+  <%= link_to nonprofit.name, nonprofit_path(nonprofit) %><br>
+  <% end %>
+</div>

@@ -1,0 +1,12 @@
+<%= form_for @nonprofit, remote: true, id: 'nonprofit-form' do |f| %>
+<%= render('layouts/errors', :object => @nonprofit) %>
+
+<%= f.label :name %>
+<%= f.text_field :name %><br>
+
+<%= f.label :description %>
+<%= f.text_area :description %><br>
+
+<%= f.submit 'Submit', id: 'nonprofit-submit' %><br>
+<%= link_to "Back", root_url %>
+<% end %>

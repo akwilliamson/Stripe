@@ -1,0 +1,4 @@
+<h2><%= @nonprofit.name %></h2>
+<p><%= @nonprofit.description %></p>
+<%= button_to "Delete this nonprofit", nonprofit_path, :method => :delete %>
+<%= link_to "Home", root_url %>
