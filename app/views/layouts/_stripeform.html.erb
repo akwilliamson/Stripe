@@ -1,13 +1,3 @@
-<h2><%= @nonprofit.name %></h2>
-<p><%= @nonprofit.description %></p>
-<%= button_to "Delete this nonprofit", nonprofit_path, :method => :delete %>
-<br>
-<%= link_to "Donate", new_nonprofit_charge_path(@nonprofit), id: 'donate-link', remote: true %>
-<br>
-<%= link_to "Home", root_url %>
-
-
-
 <div class="stripe-form">
   <form action="/nonprofits/<%= "#{@nonprofit.id}" %>/charges" method="POST" id="payment-form" date-remote="true">
     <span class="payment-errors"></span>
